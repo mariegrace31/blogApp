@@ -1,4 +1,9 @@
 class Like < ApplicationRecord
   belongs_to :user
   belongs_to :post
-end
+
+  after_create :update_post_like_counter
+
+  private
+
+  def update_post_like_counter
