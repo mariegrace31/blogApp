@@ -2,6 +2,7 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   subject { Post.new(title: 'My first post', content: 'This is my first post') }
   before { subject.save }
+
   it 'title should be present' do
     subject.title = nil
     expect(subject).to_not be_valid
@@ -12,27 +13,27 @@ RSpec.describe Post, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it 'comments_counter  should be a integer' do
-    subject.comments_counter = 'not an integer'
+  it 'commentsCounter  should be a integer' do
+    subject.commentsCounter = 'not an integer'
     expect(subject).to_not be_valid
   end
 
-  it 'comments_counter  should be greater than or equal to 0' do
-    subject.comments_counter = -3
+  it 'commentsCounter  should be greater than or equal to 0' do
+    subject.commentsCounter = -3
     expect(subject).to_not be_valid
   end
 
-  it 'likes_counter  should be a integer' do
-    subject.likes_counter = 'not an integer'
+  it 'likes_count  should be a integer' do
+    subject.likes_count = 'not an integer'
     expect(subject).to_not be_valid
   end
 
-  it 'likes_counter  should be greater than or equal to 0' do
-    subject.likes_counter = -3
+  it 'likes_count should be greater than or equal to 0' do
+    subject.likes_count = -3
     expect(subject).to_not be_valid
   end
 
-  it 'update_posts_counter should to function' do
+  it 'update_user_post_counter should to function' do
     expect { subject.send(:update_user_post_counter) }
   end
 end
