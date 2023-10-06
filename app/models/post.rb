@@ -3,7 +3,7 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :likes
 
-  after_create :update_user_post_counter
+  after_save :update_user_post_counter
 
   private
 
