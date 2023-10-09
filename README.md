@@ -48,7 +48,6 @@ The Blog app is a classic exemple of a blog website. It's a fully functional web
 ### Future Features <a name="future-features"></a>
 - Views
 - Forms
-- Validations, Model specs, and n+1 problems
 - Add Devise
 - Add authorization rules
 - Integration specs for views
