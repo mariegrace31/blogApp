@@ -52,6 +52,7 @@ The Blog app is a classic exemple of a blog website. It's a fully functional web
 - Add authorization rules
 - Integration specs for views
 - Add API-endpoints
+- controllers
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
