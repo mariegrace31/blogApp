@@ -33,7 +33,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'responds with the correct body' do
-      expect(response.body).to include('This is an indivdual post')
+      expect(response.body).to include('This is an individual post')
     end
   end
 end

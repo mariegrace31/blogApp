@@ -33,7 +33,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'responds with the correct body' do
-      expect(response.body).to include('This is an indivdual user')
+      expect(response.body).to include('This is an individual user')
     end
   end
 end
