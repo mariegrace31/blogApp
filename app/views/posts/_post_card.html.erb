@@ -1,0 +1,14 @@
+<a class="" href="<%= user_post_path(user_id: post.author_id, id: post.id) %>">
+    <span class=""><%= post.title %></span>
+    <span class=""><%= post.text %></span>
+    <span class="">Comments : <%= post.comments_counter %>, Likes : <%= post.likes_counter %></span>
+            <% if comments.present? %>
+                <% if comments.any? %>
+                    <%= render partial: "comment_card", locals: {comments: comments} %>
+                <% else %>
+                    <div class="comment-container">
+                        <div>No comment</div>
+                    </div>
+                <% end %>
+            <% end %>
+</a>
