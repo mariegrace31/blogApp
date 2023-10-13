@@ -25,3 +25,136 @@ a {
   gap: 20px;
   width: 100%;
 }
+
+.user-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+  border: 2px solid gray;
+  border-radius: 15px;
+}
+
+.user-photo {
+  width: 100px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  border: 1px gray solid;
+  object-fit: cover;
+  filter: grayscale();
+}
+
+.user-card-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  height: 90%;
+  justify-content: space-between;
+}
+
+.user-bio {
+  font-size: 15px;
+  color: black;
+  background-color: #e2e8f0;
+  font-weight: 200;
+  font-style: italic;
+  margin-top: 3px;
+  border: 1px gray solid;
+  width: 100%;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.user-totalpost {
+  font-size: 15px;
+  text-align: right;
+  width: 100%;
+}
+
+.post-text {
+  font-size: medium;
+  text-align: left;
+  width: 100%;
+  border-top: 1px solid gray;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.comment-container {
+  background-color: #e2e8f0;
+  padding: 5px;
+  border-radius: 15px;
+  margin: 5px;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid gray;
+}
+
+.comment-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.comment-name {
+  font-weight: 700;
+  font-size: large;
+  padding: 5px 0;
+}
+.comment-name span {
+  font-weight: 400;
+  font-size: medium;
+  padding: 5px 0;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.post-details {
+  font-size: 15px;
+  color: black;
+  font-weight: 200;
+  margin-top: 3px;
+  border: 1px gray solid;
+  width: 100%;
+  border-radius: 15px;
+  padding: 15px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  width: 150px;
+  height: 40px;
+  background-color: #e2e8f0;
+  color: black;
+  padding: 5px;
+  font-size: 17px;
+  border-radius: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.post-card {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  gap: 5px;
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+  border: 2px solid gray;
+  border-radius: 15px;
+}
