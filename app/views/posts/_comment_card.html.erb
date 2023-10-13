@@ -1,12 +1,12 @@
 <div class="comment-container">
-    <% if comments.any? %>
-        <% comments.each do |comment| %>
-            <div class="comment-card">
-                <div class="comment-name" ><%= comment.user.name %></div>
-                <div ><%= comment.text %></div>
-            </div>
-        <% end %>
-    <% else %>
-        <div>No comments</div>
-    <% end %>
+<% if comments.any? %>
+<% comments.each do |comment| %>
+    <div class="comment-card">
+        <div class='comment-name'> 
+         <%= comment.user.name %> : <span><%= comment.text %></span>
+        </div>
+    </div>
+<% end %>
+<% else %>
+<% end %>
 </div>

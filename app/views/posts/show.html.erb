@@ -1,12 +1,12 @@
 <section class="container">
-    <div class="">
+    <div class="flex-col post-card">
         <h1><%= @post.title %></h1>
         <span >by <%= @user.name %></span>
-        <span >Comments : <%= @post.comments_counter %>, Likes : <%= @post.likes_counter %></span>
-    </div>
+        <span >Comments : <%= @post.comments_counter || 0 %>, Likes : <%= @post.likes_counter || 0 %></span>
 
     <div class="post-text">
         <%= @post.text %>
+    </div>
     </div>
 
     <%= render partial: "comment_card", locals: {comments: @post.comments} %>
