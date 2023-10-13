@@ -1,0 +1,7 @@
+<article class="user-article">
+<div class="user-photo"><%= user.photo %></div>
+    <div class="details">
+    <h2><%= link_to user.name, user_url(user) %></h2>
+    <p>Number of posts: <%= user.posts_counter %></p>
+    </div>
+</article>
