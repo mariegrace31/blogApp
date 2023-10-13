@@ -1,1 +1,5 @@
-<h1> Hello, Users!</h1>
+<section class='container'>
+<% @users.each do |user| %>
+<%= render partial: 'user_info_card', locals: {user: user} %>
+<% end %>
+</section>
