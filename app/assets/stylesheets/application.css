@@ -40,7 +40,7 @@ a {
 
 .user-photo {
   width: 100px;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   border-radius: 100%;
   border: 1px gray solid;
   object-fit: cover;
@@ -86,7 +86,6 @@ a {
 
 .comment-container {
   background-color: #e2e8f0;
-  padding: 5px;
   border-radius: 15px;
   margin: 5px;
   width: 100%;
@@ -105,6 +104,7 @@ a {
   font-size: large;
   padding: 5px 0;
 }
+
 .comment-name span {
   font-weight: 400;
   font-size: medium;
