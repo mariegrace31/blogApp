@@ -16,7 +16,7 @@
 <div class="post-details">
   <h2><%= link_to "Post #", user_post_url(@user.id, post.id) %><%= post.id %></h2>
   <h3><%= post.text %></h3>
-  <p>Comments:<%= post.comments_counter %>,Likes:<%= post.likes_counter %></p>
+  <p>Comments:<%= post.comments_counter %>, Likes:<%= post.likes_counter %></p>
 </div>
 <% end %>
 <%= link_to user_posts_path(@user.id) do %>

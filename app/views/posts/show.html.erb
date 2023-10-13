@@ -1,1 +1,13 @@
-<h1>This is an individual post</h1>
+<section class="container">
+    <div class="">
+        <h1><%= @post.title %></h1>
+        <span >by <%= @user.name %></span>
+        <span >Comments : <%= @post.comments_counter %>, Likes : <%= @post.likes_counter %></span>
+    </div>
+
+    <div class="post-text">
+        <%= @post.text %>
+    </div>
+
+    <%= render partial: "comment_card", locals: {comments: @post.comments} %>
+</section>
