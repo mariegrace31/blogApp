@@ -6,14 +6,14 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-first_user = User.create(name: 'Moha', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Yemen.', posts_counter: 0)
+first_user = User.create(name: 'Moha', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Yemen.', posts_count: 0)
 second_user = User.create(name: 'Adeeb', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                          bio: 'Teacher from Saudi.', posts_counter: 0)
+                          bio: 'Teacher from Saudi.', posts_count: 0)
 
-first_post = Post.create(author: first_user, title: 'Hello', content: 'This is my first post', likes_counter: 0, comments_counter: 0)
-second_post = Post.create(author: first_user, title: 'Hi', content: 'This is my second post', likes_counter: 0, comments_counter: 0)
-third_post = Post.create(author: second_user, title: 'Me', content: 'This is my third post', likes_counter: 0, comments_counter: 0)
-fourth_post = Post.create(author: second_user, title: 'Yo!', content: 'This is my fourth post', likes_counter: 0, comments_counter: 0)
+first_post = Post.create(author: first_user, title: 'Hello', content: 'This is my first post', likes_count: 0, commentsCounter: 0)
+second_post = Post.create(author: first_user, title: 'Hi', content: 'This is my second post', likes_count: 0, commentsCounter: 0)
+third_post = Post.create(author: second_user, title: 'Me', content: 'This is my third post', likes_count: 0, commentsCounter: 0)
+fourth_post = Post.create(author: second_user, title: 'Yo!', content: 'This is my fourth post', likes_count: 0, commentsCounter: 0)
 
 Comment.create(post: first_post, user: first_user, text: 'Hi Moha!')
 Comment.create(post: second_post, user: first_user, text: 'Beautiful!')

@@ -2,10 +2,10 @@
     <div class="flex-col post-card">
         <h1><%= @post.title %></h1>
         <span >by <%= @user.name %></span>
-        <span >Comments : <%= @post.comments_counter || 0 %>, Likes : <%= @post.likes_counter || 0 %></span>
+        <span >Comments : <%= @post.commentsCounter || 0 %>, Likes : <%= @post.likes_count || 0 %></span>
 
     <div class="post-text">
-        <%= @post.text %>
+        <%= @post.content %>
     </div>
     </div>
 
