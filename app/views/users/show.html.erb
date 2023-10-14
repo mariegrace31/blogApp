@@ -13,9 +13,7 @@
 </div>
 
 <a
-href="<%= new_user_post_path(user_id: @user.id) %>" 
-class="border-card user-card justify-center card-title" 
-style="background-color:black; color:white;">
+href="<%= new_user_post_path(user_id: @user.id) %>"  class="btn">
 Add New Post
 </a>
 
@@ -29,7 +27,7 @@ Add New Post
 <% end %>
 <%= link_to user_posts_path(@user.id) do %>
 <% end %>
-<button type="button" class="see-posts">
+<button type="button" class="btn">
 <%= link_to "See all posts", user_posts_path(@user.id) %>
 </button>
 <% else %>

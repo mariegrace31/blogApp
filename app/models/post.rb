@@ -7,8 +7,8 @@ class Post < ApplicationRecord
   after_initialize :set_default
 
   def set_default
-    self.likes_counter ||= 0
-    self.comments_counter ||= 0
+    self.likes_count ||= 0
+    self.commentsCounter ||= 0
   end
 
   validates :title, presence: true, length: { maximum: 250 }
