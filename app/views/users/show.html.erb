@@ -11,6 +11,14 @@
   <strong>Bio</strong>
   <p><%= @user.bio %></p>
 </div>
+
+<a
+href="<%= new_user_post_path(user_id: @user.id) %>" 
+class="border-card user-card justify-center card-title" 
+style="background-color:black; color:white;">
+Add New Post
+</a>
+
 <% if @user.recent_posts.any? %>
 <% @user.recent_posts.each do |post| %>
 <div class="post-details">
