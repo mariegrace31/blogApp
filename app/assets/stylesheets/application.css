@@ -59,8 +59,8 @@ a {
 }
 
 .user-card-info p {
-  align-self:flex-end;
-  font-size: 15px
+  align-self: flex-end;
+  font-size: 15px;
 }
 
 .user-card-info h2 {
@@ -159,7 +159,7 @@ a {
 }
 
 .post-details p {
-  align-self:flex-end;
+  align-self: flex-end;
 }
 
 button {
