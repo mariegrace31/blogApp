@@ -1,0 +1,9 @@
+<section class="comment-container container">
+<%= form_with model: @post, url:  user_posts_path, class: 'user-card flex-col' do |f| %>
+<%= f.label :title, "Post title" %>
+<%= f.text_field :title %>
+<%= f.label :text, "Write your thought:" %>
+<%= f.text_area :content, class: 'w-100', rows: 10 %>
+<%= f.submit "Post", class: 'btn' %>
+<% end %>
+</section>

@@ -11,6 +11,12 @@
   <strong>Bio</strong>
   <p><%= @user.bio %></p>
 </div>
+
+<a
+href="<%= new_user_post_path(user_id: @user.id) %>"  class="btn">
+Add New Post
+</a>
+
 <% if @user.recent_posts.any? %>
 <% @user.recent_posts.each do |post| %>
 <div class="post-details">
@@ -21,7 +27,7 @@
 <% end %>
 <%= link_to user_posts_path(@user.id) do %>
 <% end %>
-<button type="button" class="see-posts">
+<button type="button" class="btn">
 <%= link_to "See all posts", user_posts_path(@user.id) %>
 </button>
 <% else %>

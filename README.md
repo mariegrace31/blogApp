@@ -46,7 +46,6 @@ The Blog app is a classic exemple of a blog website. It's a fully functional web
 - Lke and comment on posts
 
 ### Future Features <a name="future-features"></a>
-- Forms
 - Add Devise
 - Add authorization rules
 - Add API-endpoints

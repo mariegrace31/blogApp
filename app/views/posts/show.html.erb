@@ -1,36 +1,28 @@
 <section class="container">
-  <article class="user-card">
-    <img src="<%= @user.photo %>" class="user-photo" alt="user photo">
-    <div class="user-card-info">
-      <h2><%= @user.name %></h2>
-      <p>Number of posts: <%= @user.posts_count %></p>
-    </div>
-  </article>
+    <div class="flex-col post-card">
+        <h1><%= @post.title %></h1>
+        <span >by <%= @user.name %></span>
+        <span >Comments : <%= @post.commentsCounter || 0 %>, Likes : <%= @post.likes_count || 0 %></span>
 
-  <% if @user.recent_posts.any? %>
-      <% @user.recent_posts.each do |post| %>
-        <div class="post-details">
-          <h2>Post #<%= post.id %></h2>
-          <h3><%= post.title %></h3>
-          <h3><%= post.content %></h3>
-          <p>Comments: <%= post.commentsCounter || 0 %>, Likes: <%= post.likes_count || 0 %></p>
+        <div class="post-text">
+            <%= @post.content %>
         </div>
-        
-        <div class="comments">
-          <% if post.comments.any? %>
-            <ul>
-              <% post.comments.each do |comment| %>
-                <li>
-                  <p><strong><%= comment.user.name %></strong>: <%= comment.text %></p>
-                </li>
-              <% end %>
-            </ul>
-          <% else %>
-            <p>No comments for this post.</p>
-          <% end %>
-        </div>
-      <% end %>
-  <% else %>
-    <p>No posts available for this user.</p>
-  <% end %>
+    </div>
+
+
+   <div class="comment-container flex-col">
+        <%= form_with model: @comment, url: user_post_comments_path(user_id: @user.id, post_id:@post.id) do |f| %>
+            <%= f.label :comment %>
+            <%= f.text_area :text, class: "w-100", rows: 10 %>
+    <div class='flex'>
+            <%= f.submit "Add new comment", class: 'btn', disable_with: 'Submiting...'  %>
+        <% end %>
+    
+        <%= form_with model: @like, url: user_post_likes_path(user_id: @user.id, post_id:@post.id)  do |f| %>
+            <%= f.submit "Add like", class: 'btn', disable_with: 'liking...'  %>
+        <% end %>
+    </div>
+    </div>
+
+    <%= render partial: "comment_card", locals: {comments: @post.comments} %>
 </section>
