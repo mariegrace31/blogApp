@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @user = User.find(params[:user_id])
-    @post = Post.find(params[:id])
+    @post = Post.includes(:comments).find(params[:id])
     @comment = Comment.new
   end
 
@@ -18,16 +18,17 @@ class PostsController < ApplicationController
     @post = current_user.posts.new(post_params)
 
     if @post.save
-      redirect_to user_post_path(current_user), notice: 'Post was successfully created.'
+      flash[:notice] = 'Post created successfully!'
+      redirect_to user_posts_path(current_user)
 
     else
       flash[:alert] = 'Something went wrong'
       render 'new'
     end
-
   end
 
   private
+
   def post_params
     params.require(:post).permit(:title, :text)
   end
