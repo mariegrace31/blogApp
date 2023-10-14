@@ -1,13 +1,36 @@
 <section class="container">
-    <div class="flex-col post-card">
-        <h1><%= @post.title %></h1>
-        <span >by <%= @user.name %></span>
-        <span >Comments : <%= @post.commentsCounter || 0 %>, Likes : <%= @post.likes_count || 0 %></span>
-
-    <div class="post-text">
-        <%= @post.content %>
+  <article class="user-card">
+    <img src="<%= @user.photo %>" class="user-photo" alt="user photo">
+    <div class="user-card-info">
+      <h2><%= @user.name %></h2>
+      <p>Number of posts: <%= @user.posts_count %></p>
     </div>
-    </div>
+  </article>
 
-    <%= render partial: "comment_card", locals: {comments: @post.comments} %>
+  <% if @user.recent_posts.any? %>
+      <% @user.recent_posts.each do |post| %>
+        <div class="post-details">
+          <h2>Post #<%= post.id %></h2>
+          <h3><%= post.title %></h3>
+          <h3><%= post.content %></h3>
+          <p>Comments: <%= post.commentsCounter || 0 %>, Likes: <%= post.likes_count || 0 %></p>
+        </div>
+        
+        <div class="comments">
+          <% if post.comments.any? %>
+            <ul>
+              <% post.comments.each do |comment| %>
+                <li>
+                  <p><strong><%= comment.user.name %></strong>: <%= comment.text %></p>
+                </li>
+              <% end %>
+            </ul>
+          <% else %>
+            <p>No comments for this post.</p>
+          <% end %>
+        </div>
+      <% end %>
+  <% else %>
+    <p>No posts available for this user.</p>
+  <% end %>
 </section>

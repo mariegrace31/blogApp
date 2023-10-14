@@ -21,7 +21,9 @@
 <% end %>
 <%= link_to user_posts_path(@user.id) do %>
 <% end %>
-<button type="button" class="see-posts">See all posts</button>
+<button type="button" class="see-posts">
+<%= link_to "See all posts", user_posts_path(@user.id) %>
+</button>
 <% else %>
 <p>No posts found.</p>
 <% end %>
