@@ -1,15 +1,187 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.body-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* utils */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 650px;
+  gap: 20px;
+  width: 100%;
+}
+
+.user-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-decoration: none;
+  color: black;
+  border-radius: 2px;
+}
+
+.user-photo {
+  width: 100px;
+  aspect-ratio: 1/1;
+  border-radius: 2px;
+  border: 3px solid black;
+  height: 90%;
+  object-fit: cover;
+  filter: grayscale();
+}
+
+.user-card-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  height: 90%;
+  justify-content: center;
+  padding: 10px;
+  border: 3px solid black;
+  color: black;
+}
+
+.user-card-info p {
+  align-self: flex-end;
+  font-size: 15px;
+}
+
+.user-card-info h2 {
+  color: black;
+  font-size: 30px;
+}
+
+.user-bio {
+  font-size: 15px;
+  color: black;
+  margin-top: 3px;
+  border: 3px black solid;
+  width: 100%;
+  border-radius: 2px;
+  padding: 8px;
+}
+
+.user-totalpost {
+  font-size: 15px;
+  text-align: right;
+  width: 100%;
+}
+
+.post-text {
+  font-size: medium;
+  text-align: left;
+  width: 100%;
+  border-top: 3px solid black;
+  margin-top: 10px;
+  padding-top: 4px;
+}
+
+.comments {
+  border: 3px solid black;
+  padding: 6px;
+  width: 100%;
+  margin-top: -18px;
+}
+
+.comments ul {
+  list-style: none;
+}
+
+.comment-container {
+  border-radius: 2px;
+  margin: 5px;
+  width: 100%;
+  padding: 8px;
+  border: 3px solid black;
+  color: black;
+}
+
+.comment-card {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  width: 100%;
+}
+
+.comment-name {
+  font-weight: 700;
+  font-size: large;
+  padding: 3px;
+  color: black;
+}
+
+.comment-name span {
+  font-weight: 400;
+  font-size: medium;
+  padding: 5px;
+  color: black;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.post-details {
+  font-size: 15px;
+  color: black;
+  font-weight: 200;
+  margin-top: 3px;
+  border: 3px solid black;
+  width: 100%;
+  border-radius: 2px;
+  padding: 8px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-details p {
+  align-self: flex-end;
+}
+
+button {
+  width: 150px;
+  height: 40px;
+  color: black;
+  background-color: #fff;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.post-card {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  gap: 5px;
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+  border: 2px solid gray;
+  border-radius: 15px;
+}

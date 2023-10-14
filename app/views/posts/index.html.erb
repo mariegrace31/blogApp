@@ -1,1 +1,12 @@
-<h1>These are the Posts of the user!</h1>
+<section class="container">
+<article class="user-card">
+<img src="<%= @user.photo %>" class="user-photo" alt="user photo">
+<div class="user-card-info">
+ <h2><%= @user.name %></h2>
+  <p>Number of posts: <%= @user.posts_count %></p>
+</div>
+</article>
+   <% @posts.each do |post| %>
+        <%= render partial: "post_card", locals: { post: post, comments: post.recent_comments } %>
+    <% end %>
+</section>
