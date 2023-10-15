@@ -18,13 +18,11 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Blog-App <a name="about-project"></a>
 
-The Blog app is a classic exemple of a blog website. It's a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
-
+The Blog app is a classic example of a blog website. It's a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -41,9 +39,8 @@ The Blog app is a classic exemple of a blog website. It's a fully functional web
 
 ### Key Features <a name="key-features"></a>
 
-
 - List of posts
-- Lke and comment on posts
+- Like and comment on posts
 
 ### Future Features <a name="future-features"></a>
 - Add Devise
@@ -51,7 +48,6 @@ The Blog app is a classic exemple of a blog website. It's a fully functional web
 - Add API-endpoints
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- GETTING STARTED -->
 
@@ -61,7 +57,7 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-> This project requires you to have ruby on your Local Environment.
+> This project requires you to have Ruby in your Local Environment.
 
 ### Setup
 
@@ -71,7 +67,6 @@ Clone this repository to your desired folder:
   git clone https://github.com/mariegrace31/blogApp.git
   cd blogApp
 ```
-
 
 ### Install
 
@@ -113,7 +108,7 @@ Feel free to check the <a href="https://github.com/mariegrace31/blogApp/issues">
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project, show me support by:
-- following me on Github <a href ="https://github.com/mariegrace31">[@mariegrace31]</a> 
+- following me on GitHub <a href ="https://github.com/mariegrace31">[@mariegrace31]</a> 
 - or by staring ⭐ this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
