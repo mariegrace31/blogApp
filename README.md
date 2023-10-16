@@ -101,7 +101,7 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the <a href="https://github.com/mariegrace31/blogApp/issues">issues page</a>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
 <!-- SUPPORT -->
 
