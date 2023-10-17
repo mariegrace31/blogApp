@@ -47,19 +47,27 @@ RSpec.describe 'User show method ', type: :feature do
     end
   end
 
+   it 'shows recent comments' do
+    @posts[0].recent_comments.each do |comment|
+      expect(page).to have_content(comment.text)
+    end
+  end
+
   it 'shows a comments count' do
     expect(page).to have_content(@posts[0].commentsCounter)
   end
-  it 'shows a comments count' do
+  
+  it 'shows a likes count' do
     expect(page).to have_content(@posts[0].likes_count)
   end
+  
   it 'shows the Pagination button' do
     expect(page).to have_content('Pagination')
   end
+  
   it 'redirects to the post page' do
     post = @posts.first
     click_link(post.title)
     expect(page).to have_current_path(user_post_path(@user, post))
   end
-
 end
