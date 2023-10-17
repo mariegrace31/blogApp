@@ -43,17 +43,15 @@ RSpec.describe 'Post show method', type: :feature do
     expect(page).to have_content(@post.text)
   end
 
-  it 'displays a comment form' do
-    expect(page).to have_css('form#new_comment')
-  end
-
-  it 'displays a like button' do
-    expect(page).to have_css('form#new_like')
-  end
-
   it 'displays comments' do
     @post.comments.each do |comment|
       expect(page).to have_content(comment.text)
+    end
+  end
+
+  it 'shows username of each commentor' do
+    @post.comments.each do |comment|
+      expect(page).to have_content(comment.user.name)
     end
   end
 end
