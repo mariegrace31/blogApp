@@ -8,8 +8,8 @@ RSpec.describe 'User show method ', type: :feature do
                         bio: 'Teacher from Yemen.', posts_count: 8)
 
     @posts = [Post.create(author: @user, title: 'Hi', content: 'This is my first post', commentsCounter: 0, likes_count: 0),
-              Post.create(author: @user, title: 'Hey', content: 'This is my second post',commentsCounter: 0, likes_count: 0),
-              Post.create(author: @user, title: 'What\'s up', content: 'This is my third post',commentsCounter: 0, likes_count: 0)]
+              Post.create(author: @user, title: 'Hey', content: 'This is my second post', commentsCounter: 0, likes_count: 0),
+              Post.create(author: @user, title: 'What\'s up', content: 'This is my third post', commentsCounter: 0, likes_count: 0)]
     # rubocop:enable Layout/LineLength
     visit user_path(@user)
   end
@@ -28,7 +28,7 @@ RSpec.describe 'User show method ', type: :feature do
   end
 
   it 'show the number of posts' do
-      expect(page).to have_content("Number of posts: #{@user.posts_count}")
+    expect(page).to have_content("Number of posts: #{@user.posts_count}")
   end
 
   it 'shows the first three posts' do
@@ -41,14 +41,14 @@ RSpec.describe 'User show method ', type: :feature do
     find_button('See all Posts')
   end
 
-    it 'redirects me to that post\'s show page' do
-      click_link('See all Posts')
-      expect(page).to have_current_path(user_posts_path(@user))
-    end
+  it 'redirects me to that post\'s show page' do
+    click_link('See all Posts')
+    expect(page).to have_current_path(user_posts_path(@user))
+  end
 
- it 'redirects to the the clicked post link' do
+  it 'redirects to the the clicked post link' do
     post = @posts.first
     click_link(post.title)
     expect(page).to have_current_path(user_post_path(@user, post))
- end
+  end
 end

@@ -47,6 +47,5 @@ RSpec.describe 'User show method ', type: :feature do
     end
   end
 
-#  Write your code below
-
+  #  Write your code below
 end
