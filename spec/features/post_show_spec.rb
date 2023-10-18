@@ -39,8 +39,8 @@ RSpec.describe 'Post show method', type: :feature do
     expect(page).to have_content("Likes : #{@post.likes_count}")
   end
 
-  it 'displays the post text' do
-    expect(page).to have_content(@post.text)
+  it 'displays the post content' do
+    expect(page).to have_content(@post.content)
   end
 
   it 'displays comments' do

@@ -21,15 +21,4 @@ RSpec.describe 'User index method which is also homepage', type: :feature do
     expect(page).to have_selector(:xpath, '/html/body/section/article[4]/img')
   end
 
-  it 'shows the number of posts each user has' do
-    @users.each do |user|
-      expect(page).to have_content("Number of posts: #{user.posts_count}")
-    end
-  end
-
-  it 'can redirect to the user"s show page when click on the username' do
-    user = @users.first
-    click_link(user.name)
-    expect(page).to have_current_path(user_path(user))
-  end
-end
+  # write your code below

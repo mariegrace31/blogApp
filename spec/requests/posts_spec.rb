@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
   describe 'GET /index' do
-    before do
-      get user_posts_path(user_id: 1)
+    before :each do
+      get "/users/#{user.id}/posts"
     end
 
     it 'returns http success' do
@@ -20,8 +20,9 @@ RSpec.describe 'Posts', type: :request do
   end
 
   describe 'GET /show' do
-    before do
-      get user_post_path(user_id: 1, id: 1)
+    let(:post) { create(:post, author: user) }
+    before :each do
+      get "/users/#{user.id}/posts/#{post.id}"
     end
 
     it 'returns http success' do

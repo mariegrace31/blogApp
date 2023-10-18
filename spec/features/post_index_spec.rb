@@ -6,11 +6,11 @@ RSpec.describe 'User show method ', type: :feature do
                         photo: 'https://images.unsplash.com/photo-1594897030264-ab7d87efc473?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80',
                         bio: 'Teacher from Yemen.', posts_count: 5)
 
-    @posts = [Post.create(author: @user, title: 'Hello', content: 'This is my first post', likes_count: 0,
+    @posts = [Post.create(author: @user, title: 'Hello', content: 'This is first post', likes_count: 0,
                           commentsCounter: 0),
-              Post.create(author: @user, title: 'Hi', content: 'This is my second post', likes_count: 0,
+              Post.create(author: @user, title: 'Hi', content: 'This is second post', likes_count: 0,
                           commentsCounter: 0),
-              Post.create(author: @user, title: 'What"s up', content: 'This is my third post', likes_count: 0,
+              Post.create(author: @user, title: 'What"s up', content: 'This is third post', likes_count: 0,
                           commentsCounter: 0)]
 
     @comments = [
@@ -18,7 +18,6 @@ RSpec.describe 'User show method ', type: :feature do
       Comment.create(user: @user, post: @posts[0], text: 'How are you'),
       Comment.create(user: @user, post: @posts[1], text: 'What are you doing tonight')
     ]
-
     visit user_posts_path(@user, @posts)
   end
 
@@ -47,7 +46,7 @@ RSpec.describe 'User show method ', type: :feature do
     end
   end
 
-   it 'shows recent comments' do
+  it 'shows recent comments' do
     @posts[0].recent_comments.each do |comment|
       expect(page).to have_content(comment.text)
     end
@@ -56,15 +55,15 @@ RSpec.describe 'User show method ', type: :feature do
   it 'shows a comments count' do
     expect(page).to have_content(@posts[0].commentsCounter)
   end
-  
+
   it 'shows a likes count' do
     expect(page).to have_content(@posts[0].likes_count)
   end
-  
+
   it 'shows the Pagination button' do
     expect(page).to have_content('Pagination')
   end
-  
+
   it 'redirects to the post page' do
     post = @posts.first
     click_link(post.title)
