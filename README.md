@@ -43,6 +43,7 @@ The Blog app is a classic example of a blog website. It's a fully functional web
 - Like and comment on posts
 
 ### Future Features <a name="future-features"></a>
+
 - Add Devise
 - Add authorization rules
 - Add API-endpoints
@@ -79,13 +80,14 @@ Install this project with:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Usage
+
 > To run the project, execute the following command:
+
 ```sh
    rails server
 ```
 
 ## 👥 Authors <a name="authors"></a>
-
 
 👤 **BAHATI Marie-Grace**
 
@@ -99,6 +101,10 @@ Install this project with:
 - Twitter: [@twitterhandle](https://twitter.com/Kkmanuu1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/emmanuel-kipngeno/)
 
+👤 **kerlos bahaa**
+
+- GitHub: [@kerlos bahaa ](https://github.com/kerlos-bahaa)
+- LinkedIn: [@kerlos bahaa](https://www.linkedin.com/in/kerlos-bahaa/)
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
@@ -114,6 +120,7 @@ Feel free to check the <a href="https://github.com/mariegrace31/blogApp/issues">
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project, show me support by:
+
 - following me on GitHub <a href ="https://github.com/mariegrace31">[@mariegrace31]</a>
 - or by staring ⭐ this project.
 
@@ -124,8 +131,8 @@ If you like this project, show me support by:
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I want to express our sincere gratitude to [Microverse](https://github.com/microverseinc), the dedicated reviewers, and collaborators. Your unwavering support and feedback have played an immense role in making this journey successful. Thank you for being an integral part of my achievements.
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
