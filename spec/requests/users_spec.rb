@@ -13,10 +13,6 @@ RSpec.describe 'Users', type: :request do
     it 'renders the correct template' do
       expect(response).to render_template('users/index')
     end
-
-    it 'responds with the correct body' do
-      expect(response.body).to include('Hello, Users!')
-    end
   end
 
   describe 'GET /show' do

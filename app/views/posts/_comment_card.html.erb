@@ -2,7 +2,7 @@
 
 <% if comments.any? %>
 <% comments.each do |comment| %>
-
+  
     <div class="comment-card">
         <div class='comment-name'> 
          <%= comment.user.name %> : <span><%= comment.text %></span>
@@ -10,5 +10,6 @@
     </div>
 <% end %>
 <% else %>
+<div>No comments</div>
 <% end %>
 </div>
