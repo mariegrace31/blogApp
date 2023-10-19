@@ -9,4 +9,8 @@
    <% @posts.each do |post| %>
         <%= render partial: "post_card", locals: { post: post, comments: post.recent_comments } %>
     <% end %>
+
+    <div class="flex">
+    <button class="button">Pagination</button>
+  </div>
 </section>

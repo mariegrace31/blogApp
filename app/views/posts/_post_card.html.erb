@@ -1,5 +1,16 @@
-<a class="user-card-info" href="<%= user_post_path(user_id: post.author_id, id: post.id) %>">
-    <span class=""><%= post.title %></span>
-    <span class=""><%= post.content %></span>
-    <span class="user-totalpost">Comments : <%= post.commentsCounter %>, Likes : <%= post.likes_count %></span>       
+<a class="user-bio" href="<%= user_post_path(user_id: post.author_id, id: post.id) %>">
+    <div class="div">
+        <span class="post"><%= post.title %> <%= post.content %></span>
+        <span class="user-totalpost">Comments : <%= post.commentsCounter %>, Likes : <%= post.likes_count %></span>
+    </div>
+    <p class="commnets-title">Comments:</p>
+            <% if comments.present? %>
+                <% if comments.any? %>
+                    <%= render partial: "comment_card", locals: {comments: comments} %>
+                <% else %>
+                    <div class="comment-container">
+                        <div>No comment</div>
+                    </div>
+                <% end %>
+            <% end %>
 </a>

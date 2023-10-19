@@ -20,7 +20,7 @@ Add New Post
 <% if @user.recent_posts.any? %>
 <% @user.recent_posts.each do |post| %>
 <div class="post-details">
-  <h2><%= link_to "Post #", user_post_url(@user.id, post.id) %><%= post.id %></h2>
+<h2><%= link_to post.title, user_post_path(@user,post) %><%= post.id %></h2>
   <h3><%= post.content %></h3>
   <p>Comments:<%= post.commentsCounter || 0 %>, Likes:<%= post.likes_count || 0 %></p>
 </div>
@@ -28,7 +28,7 @@ Add New Post
 <%= link_to user_posts_path(@user.id) do %>
 <% end %>
 <button type="button" class="btn">
-<%= link_to "See all posts", user_posts_path(@user.id) %>
+<%= link_to "See all Posts", user_posts_path(@user) %>
 </button>
 <% else %>
 <p>No posts found.</p>
