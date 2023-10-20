@@ -1,0 +1,7 @@
+<header >
+  <h1>
+    Hi <%= current_user.name %>
+  </h1>
+  <%= link_to 'Sign Out', sign_out_user_path, class: "border-card user-card justify-center card-title", 
+      style: "background-color:black; color:white; width: 30%;" %>
+</header>
