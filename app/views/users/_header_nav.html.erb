@@ -8,9 +8,5 @@
 <% end %>
 </div>
 
-<% if user_signed_in? %>
-      <%= link_to "Sign out", destroy_user_session_path%>
-    <% else %>
-      <%= link_to 'Sign in', new_user_session_path , class: 'ml-5 btn btn-primary my-2' %>
-<% end %>
+<%= link_to "Sign out", sign_out_user_path%>
 </header>
