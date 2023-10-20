@@ -1,7 +1,16 @@
 <header >
-  <h1>
-    Hi <%= current_user.name %>
-  </h1>
-  <%= link_to 'Sign Out', sign_out_user_path, class: "border-card user-card justify-center card-title", 
-      style: "background-color:black; color:white; width: 30%;" %>
+<div class="flex flex-col">
+<h1>
+  Hi <%= current_user.name %>
+</h1>
+<% unless current_user.confirmed? %>
+  <div style="color:red;">Email not verified</div>
+<% end %>
+</div>
+
+<% if user_signed_in? %>
+      <%= link_to "Sign out", destroy_user_session_path%>
+    <% else %>
+      <%= link_to 'Sign in', new_user_session_path , class: 'ml-5 btn btn-primary my-2' %>
+<% end %>
 </header>
