@@ -1,5 +1,6 @@
 <section class='container'>
 <% @users.each do |user| %>
+  <%= render partial: 'header_nav' %>
 <%= render partial: 'user_info_card', locals: {user: user} %>
 <% end %>
 </section>
