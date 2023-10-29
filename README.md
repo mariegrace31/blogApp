@@ -40,11 +40,10 @@ The Blog app is a classic example of a blog website. It's a fully functional web
 ### Key Features <a name="key-features"></a>
 
 - List of posts
-- Like and comment on posts
+- Like and comment on a post
 
 ### Future Features <a name="future-features"></a>
 
-- Add authorization rules
 - Add API-endpoints
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
