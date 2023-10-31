@@ -44,7 +44,7 @@ The Blog app is a classic example of a blog website. It's a fully functional web
 
 ### Future Features <a name="future-features"></a>
 
-- Add API-endpoints
+- Deploy app
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
