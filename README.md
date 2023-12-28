@@ -40,7 +40,7 @@ Blog app is a classic example of a blog website. It's a fully functional website
 ### Key Features <a name="key-features"></a>
 
 - List of posts
-- Like and comment on a post
+- Like and comment on post
 
 ### Future Features <a name="future-features"></a>
 
