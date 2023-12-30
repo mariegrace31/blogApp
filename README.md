@@ -19,7 +19,6 @@
 - [📝 License](#license)
 
 
-
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Blog-App <a name="about-project"></a>
