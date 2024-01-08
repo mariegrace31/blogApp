@@ -26,6 +26,7 @@ Blog app is a classic example of a blog website. It's a fully functional website
 
 ## 🛠 Built With <a name="built-with"></a>
 
+
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
